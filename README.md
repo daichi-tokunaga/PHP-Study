@@ -40,6 +40,7 @@ php sample1.php
 | `sample1.php` | 変数・四則演算・条件分岐・論理演算子 |
 | `sample2.php` | for文・配列・foreach |
 | `sample3.php` | 関数（引数・戻り値） |
+| `sample4.php` | 型宣言・strict_types |
 | `class/Main.php` | クラスの使い方 |
 
 `study.php` は自由に書いて試せるファイルです。
@@ -84,14 +85,25 @@ php q1.php
 # テスト3:OK  ← 全てOKになれば正解
 ```
 
-#### work4（クラス基礎）
+#### work4（型宣言）
 
-`works/work4/`
+`works/work4/q1.php` 〜 `q5.php`
 
-Userクラスを拡張する問題です。`問題.md` を読んでから取り組んでください。
+関数の引数・戻り値に型を付ける問題です。`declare(strict_types=1)` の挙動も学びます。
 
 ```bash
 cd works/work4
+php q1.php
+```
+
+#### work5（クラス基礎）
+
+`works/work5/`
+
+型宣言付きのUserクラスを拡張する問題です。`問題.md` を読んでから取り組んでください。
+
+```bash
+cd works/work5
 cat 問題.md    # 問題文を確認
 php main.php   # 実行して動作確認
 ```
