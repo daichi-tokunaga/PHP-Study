@@ -29,7 +29,7 @@ class User {
         return $this->name;
     }
 
-    // 年齢を変更
+    // 年齢を変更(問題2: バリデーションを追加すること)
     function setAge(int $age): void {
         $this->age = $age;
     }
@@ -39,7 +39,7 @@ class User {
         return $this->age;
     }
 
-    // 問題2
+    // 問題3
     function getOlder(): void {
 
     }
