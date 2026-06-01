@@ -16,9 +16,9 @@ if (double(0) === 0) {
 }
 
 if (double(-2) === -4) {
-    echo("テスト2:OK\n");
+    echo("テスト3:OK\n");
 } else {
-    echo("テスト2:NG\n");
+    echo("テスト3:NG\n");
 }
 
 // ↑確認用コード↑(編集しないこと)

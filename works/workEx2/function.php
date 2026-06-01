@@ -1,50 +1,39 @@
 <?php
-// 関数1
-function readBooksData()
+
+// 関数1: 生徒の平均点を計算する
+// 点数の配列を受け取り、平均点を返す関数
+function calcAverage($scores)
 {
-    $filename = './books.csv';
-
-    // CSVファイルを開く
-    if (($file = fopen($filename, 'r')) !== FALSE) {
-        // ヘッダーを読み込む
-        $header = fgetcsv($file, 1000, ',');
-
-        $books = array();
-
-        // 行ごとに読み込んで連想配列に変換
-        while (($data = fgetcsv($file, 1000, ',')) !== FALSE) {
-            $book = array();
-            // TODO:ここでループを使ってデータを連想配列に変換
-
-            // print_r($data); <- これで$dataの中身を確認できる。
-        }
-
-        fclose($file);
-
-        // 結果を返却
-        return $books;
-    } else {
-        echo "ファイルを開けませんでした。";
-    }
+    // ここにコードを追記
 }
 
-// 関数2
-function calcTax($books)
+// 関数2: 平均点から成績を返す
+// 90以上: "優"
+// 70以上90未満: "良"
+// 50以上70未満: "可"
+// 50未満: "不可"
+function getGrade($average)
 {
+    // ここにコードを追記
 }
 
-// 関数3
-function findBooks($books, $str)
+// 関数3: 合格者のみを返す
+// 生徒の配列を受け取り、平均点が60以上の生徒のみの配列を返す関数
+// ※ calcAverage関数を使うこと
+function getPassedStudents($students)
 {
+    // ここにコードを追記
 }
 
-// データを表示する関数
-function displayBooks($books)
+// 表示用関数(編集しないこと)
+function displayStudents($students)
 {
-    foreach ($books as $book) {
-        echo "title: " . $book["title"] . "\n";
-        echo "author: " . $book["auther"] . "\n";
-        echo "price: " . $book["price"] . "円\n";
+    foreach ($students as $student) {
+        $avg = calcAverage($student["scores"]);
+        $grade = getGrade($avg);
+        echo "名前: " . $student["name"] . "\n";
+        echo "平均点: " . $avg . "\n";
+        echo "成績: " . $grade . "\n";
         echo "------------------\n";
     }
 }

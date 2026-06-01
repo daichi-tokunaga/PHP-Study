@@ -25,7 +25,7 @@ class Gun {
     }
 
     // リロード
-    function relaod() {
+    function reload() {
         // 問題2
     }
 
